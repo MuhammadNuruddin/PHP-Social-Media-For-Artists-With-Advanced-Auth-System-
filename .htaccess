@@ -1,0 +1,33 @@
+
+## TURN REWRITE ENGINE ON
+
+##RewriteEngine On
+
+
+## REWRITE FOR HOMEPAGE(INDEX.PHP)
+
+##RewriteRule ^home index.php [L]
+
+
+
+
+## REWRITE FOR HOMEPAGE(LOGOUT.PHP)
+
+##RewriteRule ^logout logout.php [L]
+
+
+
+## REWRITE FOR HOMEPAGE(UPLOAD.PHP)
+
+##RewriteRule ^upload upload.php [L]
+
+
+
+## REWRITE RULE FOR USER_PROFILE PAGE
+
+##RewriteRule ^user/([a-zA-Z\d]+) user_profile.php?q_user=$1 [NC,L]
+
+
+## REWRITE RULE FOR PROFILE PAGE
+
+##RewriteRule ^profile profile.php [L]

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../fontawesome/fontawesome/css/all.min.css" rel="stylesheet">
+    <link href="../bootstrap/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Modal Info</title>
+</head>
+<style type="text/css" rel="stylesheet">
+* {
+   box-sizing: border-box;
+}
+.Modal {
+   position: fixed;
+   z-index: 1;
+   left: 0;
+   top: 0;
+   height: 100%;
+   width: 100%;
+   overflow: auto;
+   background: rgba(0,0,0,0.4);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.Modal-content {
+   background: #f4f4f4;
+   /*margin: 10% auto;*/
+   padding: 10px;
+   width: 90%;
+   box-shadow: 0 0 3px rgba(0,0,0,0.2);
+   height: 80vh;
+}
+.closeBtn {
+   color:rgba(0,0,0,0.7);
+   /*float: right;*/
+   font-size: 35px;
+}
+.closeBtn:hover,.closeBtn:focus,.controlBtn:hover,.controlBtn:focus {
+   cursor: pointer;
+   color: rgba(0,0,0,0.3);
+   text-decoration: none;
+   transition: all 0.5s ease-out;
+}
+.controlBtn {
+   position: absolute;
+   top: 50%;
+   font-size: 2rem;
+   color: rgba(0,0,0,0.7);
+}
+.btnLeft {
+   left: 10px;
+}
+.btnRight {
+   right: 10px;
+}
+.img-container {
+   height: 25rem;
+   margin-top: 0.8rem;
+}
+.img-container img {
+   width: 100%;
+   height: 100%;
+   border: 1px solid rgba(0,0,0,0.3);
+   border-radius: 2px;
+   cursor: pointer;
+}
+@media (max-width: 768px){
+.controlBtn {
+/*opacity: 0.5;*/
+color: rgba(0,0,0,0.7);
+font-size: 2rem;
+}
+.btnLeft {
+   left: 2px;
+}
+.closeBtn {
+   position: absolute;
+   top: 1px;
+   right: 8px;
+   font-size: 1.6rem;
+}
+.btnRight {
+   right: 2px;
+} 
+.img-container img {
+   height: 100%;
+} 
+.Modal-content {
+   height: 85vh;
+}
+.name {
+   font-size: 0.9rem !important;
+}
+.img-container {
+   height: 21rem;
+}
+}
+.right {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.info {
+   flex: 1;
+   display: flex;
+   align-items: center;
+}
+.closeBtn {
+   flex: 0;
+}
+.name {
+   margin-left: 0.5rem;
+   font-family: sans-serif;
+   font-weight: bold;
+   font-size: 1.1rem;
+}
+</style>
+<body>
+
+
+
+
+<div class="Modal" id="simpleModal">
+   <span><i class="far fa-caret-square-left btnLeft controlBtn"></i></span>
+   <span><i class="far fa-caret-square-right btnRight controlBtn"></i></span>
+ <div class="Modal-content">
+   <div class="modal-head">
+         <div class="right">
+            <div class="info">
+               <img src="../image/person.jpg" style="width: 30px;border-radius: 50%;height: 30px;border: 1px solid rgba(0,0,0,0.4)">
+               <span class="name"><a href="#" style="text-decoration: none;color: rgba(0,0,0,0.7);">Cybernetic_Organism</a></span> 
+            </div>
+            <span class="closeBtn"><i class="far fa-window-close"></i></span>
+         </div>
+   </div>
+         
+   
+    <div class="container px-0">
+      <div class="img-container">
+        <img src="../background/img1.jpg" class="img-fluid"> 
+      </div>
+       
+    </div>
+ </div>  
+</div>
+
+
+
+
+
+
+
+
+<script src="../bootstrap/bootstrap/dist/js/popper.min.js"></script>
+<script src="../bootstrap/bootstrap/dist/js/jquery-3.3.1.min.js"></script>
+<script src="../bootstrap/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+
+   var modal = $('#simpleModal');
+   var closeBtn = $('.closeBtn');
+</script>
+</body>
+</html>
